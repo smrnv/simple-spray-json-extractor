@@ -1,26 +1,21 @@
 name := "ssje"
 
-version := "0.1"
+version := "1.0.0"
 
-scalaVersion := "2.12.3"
+val scalaMajorVer = "2.12.3"
+
+scalaVersion := scalaMajorVer
+crossScalaVersions := scalaMajorVer +: Seq("2.11.8")
 
 scalacOptions := Seq(
-  "-feature",
   "-unchecked",
   "-deprecation",
-  "-language:existentials",
   "-language:higherKinds",
   "-language:implicitConversions",
   "-Xfatal-warnings",
-  "-Xlint",
-  "-Yno-adapted-args",
   "-Ywarn-dead-code",
   "-Ywarn-numeric-widen",
-  "-Ywarn-value-discard",
-  "-Xfuture",
-  "-Ywarn-unused-import",
-  "-encoding",
-  "UTF-8"
+  "-Ywarn-unused-import"
 )
 
 libraryDependencies ++= Seq(
